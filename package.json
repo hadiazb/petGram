@@ -1,0 +1,46 @@
+{
+  "name": "react-project",
+  "version": "1.0.0",
+  "description": "React project",
+  "main": "index.js",
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "standard": "^14.3.4",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server",
+    "lint": "standard",
+    "now-build": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hadiazb/petGram.git"
+  },
+  "keywords": [],
+  "author": "Hugo Andrés Diáz Bernal <hugoandresdiazbernal@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hadiazb/petGram/issues"
+  },
+  "homepage": "https://github.com/hadiazb/petGram#readme",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "standard": {
+    "ignore": [
+      "/api/**", "webpack.config.js", "package.json"
+    ]
+  },
+  "eslintConfig": {
+      "extends": ["./node_modules/standard/eslintrc.json"]
+  }
+}

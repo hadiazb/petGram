@@ -17,7 +17,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --mode production",
     "dev": "webpack-dev-server",
     "lint": "standard",
     "now-build": "npm run build"

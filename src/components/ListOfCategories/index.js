@@ -3,7 +3,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import { Category } from "../Category/index";
 import { List, Item } from "./styles.js";
 
-function useCategoriesData() {
+function useCategoriesData () {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(false);
 

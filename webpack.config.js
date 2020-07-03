@@ -1,27 +1,27 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   output: {
-    filename: "app.bundle.js",
+    filename: 'app.bundle.js'
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "src/index.html",
-    }),
+      template: 'src/index.html'
+    })
   ],
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
-            plugins: ['@babel/pugin-syntax-dynamic-import'],
-            presets: ["@babel/preset-env", "@babel/preset-react"],
-          },
-        },
-      },
-    ],
-  },
-};
+            plugins: ['@babel/plugin-syntax-dynamic-import'],
+            presets: ['@babel/preset-env', '@babel/preset-react']
+          }
+        }
+      }
+    ]
+  }
+}

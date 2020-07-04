@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 
 import { ApolloClient, HttpLink, InMemoryCache } from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
+import Context from "./Context";
 
 import { App } from "./App";
 
@@ -17,11 +18,11 @@ const client = new ApolloClient({
   link,
 });
 
-// ReactDOM.render(<App />, document.getElementById("app"));
-
 ReactDOM.render(
-  <ApolloProvider client={client}>
-    <App />
-  </ApolloProvider>,
+  <Context.Provider value={{ isAuth: true }}>
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
+  </Context.Provider>,
   document.getElementById("app")
 );

@@ -34,8 +34,12 @@
   },
   "homepage": "https://github.com/hadiazb/petGram#readme",
   "dependencies": {
+    "@apollo/react-hooks": "^3.1.5",
+    "apollo-boost": "^0.4.9",
+    "graphql": "^15.2.0",
     "intersection-observer": "^0.11.0",
     "react": "^16.13.1",
+    "react-apollo": "^3.1.5",
     "react-dom": "^16.13.1",
     "react-icons": "^3.10.0",
     "styled-components": "^5.1.1"

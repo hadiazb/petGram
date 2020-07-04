@@ -18,7 +18,7 @@
   },
   "scripts": {
     "build": "webpack --mode production",
-    "dev": "webpack-dev-server",
+    "dev": "webpack-dev-server --history-api-fallback",
     "lint": "standard",
     "now-build": "npm run build"
   },
@@ -35,6 +35,7 @@
   "homepage": "https://github.com/hadiazb/petGram#readme",
   "dependencies": {
     "@apollo/react-hooks": "^3.1.5",
+    "@reach/router": "^1.3.4",
     "apollo-boost": "^0.4.9",
     "graphql": "^15.2.0",
     "intersection-observer": "^0.11.0",

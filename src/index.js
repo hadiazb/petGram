@@ -11,6 +11,21 @@ const cache = new InMemoryCache();
 
 const link = new HttpLink({
   uri: "https://hadiaz.hadiazb.vercel.app/graphql",
+  request: operation => {
+    const token = window.sessionStorage.getItem('token')
+    const authorization = token ? `Bearrer ${token} ` : '' ;
+    operation.setContext({
+      header: {
+        authorization
+      }
+    })
+  }, onError: error => {
+    const { networkError} = error 
+    if (networkError && networkError.result.code == 'ivalid_token') {
+      window.sessionStorage.removeItem('token')
+      window.localStorage.href = '/'
+    }
+  }
 });
 
 const client = new ApolloClient({
